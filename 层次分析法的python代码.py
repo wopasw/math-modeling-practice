@@ -10,3 +10,16 @@ eig_val, eig_vec = np.linalg.eig(A)
 print(eig_val)
 max_eig_val = np.max(eig_val)
 print(max_eig_val)
+"""
+CI = np.percentile(eig_val, 95)
+print(CI)
+"""
+j = (max_eig_val-3)/2
+print(j)
+i = [0,0,0,0.52,0.89]
+mj = j/i[3]
+print(mj)
+if mj > 0.1:
+    print("不符合一致性检验")
+else:
+    print("符合一致性检验")
